@@ -13,6 +13,8 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'cloudinary'
 
+gem 'carrierwave', '~> 1.2'
+
 gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
