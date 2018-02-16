@@ -1,6 +1,7 @@
 <div class="container">
   <div class="col-md-4 col-md-offset-4">
     <h1 class ="prems"><%= @cocktail.name %></h1>
+    <%= cl_image_tag("muggo8d9e05astdench0.jpg", width: 500, height: 300, crop: :fill) %>
     <% @cocktail.doses.each do |dose| %>
     <p><%= dose.description %> of <%= dose.ingredient.name %> | <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }%></p>
     <% end %>
