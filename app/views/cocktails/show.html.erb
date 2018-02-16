@@ -1,2 +1,7 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="container">
+<h1 class ="prems"><%= @cocktail.name %></h1>
+<p><%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %></p>
+<% @cocktail.doses.each do |dose| %>
+<p><%= dose.description %> of <%= dose.ingredient.name %> | <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }%></p>
+<% end %>
+</div>

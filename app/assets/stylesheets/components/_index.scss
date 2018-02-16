@@ -1,0 +1,8 @@
+// Import your components CSS files here.
+@import "alert";
+@import "navbar";
+
+.container h1 {
+  color: $red;
+  font-family: 'Lobster', cursive;
+}

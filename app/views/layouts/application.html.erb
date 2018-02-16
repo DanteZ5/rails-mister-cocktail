@@ -5,10 +5,21 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   </head>
 
   <body>
+    <div class="my-navbar navbar">
+      <%= link_to 'cocktails', cocktails_path, class: 'link'%>
+      <h3 id="nav-title"><i class="fas fa-glass-martini"></i> Funky Cocktails</h3>
+      <%= link_to 'new cocktail', new_cocktail_path, class: 'link' %>
+    </div>
+
     <%= yield %>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
