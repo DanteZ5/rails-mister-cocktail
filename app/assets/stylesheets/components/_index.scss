@@ -2,7 +2,7 @@
 @import "alert";
 @import "navbar";
 
-.container h1 {
+.container h1, h2, h3, h4 {
   color: $red;
   font-family: 'Lobster', cursive;
 }

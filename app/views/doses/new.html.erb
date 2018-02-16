@@ -2,8 +2,8 @@
   <div class="col-md-4 col-md-offset-4">
     <h1><%= @cocktail.name %></h1>
     <%= simple_form_for [@cocktail, @dose] do |f| %>
-      <%= f.input :description %>
-      <%= f.association :ingredient, collection: @ingredients %>
+      <%= f.input :description, placeholder: 'ie: 6cl' %>
+      <%= f.association :ingredient, collection: @ingredients, prompt: "pick ingredient" %>
       <%= f.submit "add dose", class: "btn btn-primary" %>
     <% end %>
   </div>
